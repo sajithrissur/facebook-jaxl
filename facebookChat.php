@@ -13,19 +13,19 @@ require_once 'xmpp/xmpp_msg.php';
 function sendMessage($client)
 {
 
-    $msg = new XMPPMsg(array('to'=>'617183653@chat.facebook.com'), 'test message');
+    $msg = new XMPPMsg(array('to'=>'userid@chat.facebook.com'), 'test message');
     $client->send($msg);
 
     _info("test messages sent");
 }
 
 
-$user = '617183653'; 
+$user = 'userid'; 
 // $user = $argv[1];    // User name or facebook id
 $jidSuffix = '@chat.facebook.com';  // Facebook chat account suffix
-$appKey = '263501247121744';    // Taken from developer.facebook.com
+$appKey = 'appIDhere';    // Taken from developer.facebook.com
 // $appKey = $argv[2];  // Facebook app token
-$accessToken = 'CAADvpyo7iVABAM9EZBToeyo0JrZCEBdY28KG4kcDCoG6efqhSdiugLJKEEEh56zAZCDzH2n2Bml1LxUtZBV1ZB676m4thwwQKZBBAzeS0z1no91QyR8BwlTq32Hp1wP9OGnhDom6w9qNA97U47mhMUOmGiAE6pzWEZD';  // Facebook user token - tried both app token tool on developer.facebook.com and token provided after user login both posses xmpp-login permission
+$accessToken = 'access token from facebook developer page';  // Facebook user token - tried both app token tool on developer.facebook.com and token provided after user login both posses xmpp-login permission
 // $accessToken = $argv[3];
 
 $client = new JAXL( array(  // (required) credentials
